@@ -83,7 +83,7 @@ header a:hover {
 
 section {
   color: #bababa;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 }
 
 .error section {
@@ -346,4 +346,19 @@ input[type="submit"] {
 
 .next {
   float: right;
+}
+
+footer {
+  color: #5a5a5a;
+  font-family: "Raleway", sans-serif;
+  background: #313131;
+  padding: 70px 0 250px;
+}
+
+footer a {
+  color: #787878;
+}
+
+footer a:hover {
+  color: #8e8e8e;
 }
