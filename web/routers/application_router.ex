@@ -1,5 +1,4 @@
-Code.require_file "../repo.ex", __FILE__
-Code.require_file "../posts.ex", __FILE__
+Code.require_file "../blog.ex", __FILE__
 
 defmodule ApplicationRouter do
   use Dynamo.Router
