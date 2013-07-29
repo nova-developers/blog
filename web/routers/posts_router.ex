@@ -15,7 +15,6 @@ defmodule PostsRouter do
   end
 
   def render_post(conn, post) when post == nil, do: render(conn, "404.html")
-
   def render_post(conn, post), do: render(conn, "post.html", post: post)
 
 end

@@ -17,4 +17,5 @@ defmodule ApplicationRouter do
   get "/*" do
     render conn, "404.html"
   end
+
 end

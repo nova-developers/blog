@@ -32,7 +32,6 @@
             <a href="/posts/<%= id %>" class="button readmore">Read More</a>
           </article>
         <% end %>
-
       </section>
 
     </div>
