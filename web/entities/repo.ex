@@ -3,7 +3,9 @@ alias Ecto.Adapters.Postgres
 defmodule MyRepo do
   use Ecto.Repo, adapter: Postgres
 
-  def url, do: "ecto://blogger@localhost/blog"
+  @env Mix.env
+
+  def url, do: "ecto://postgres@localhost/blog_#{@env}"
 end
 
 { :ok, _pid } = Postgres.start(MyRepo)
