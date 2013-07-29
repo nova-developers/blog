@@ -10,14 +10,12 @@ end
 defmodule PostQueries do
   import Ecto.Query
 
-  def find_by_id(id) do
-    _find_by_id(id) |> post
-  end
-
-  def post({ :ok, post }),  do: post
-  def post(:error), do: nil
+  def find_by_id(id), do: _find_by_id(id) |> post
 
   def all, do: Enum.map(_all, fn(x) -> {x.id, x.headline, x.content} end)
+
+  defp post({ :ok, post }),  do: post
+  defp post(:error), do: nil
 
   defp _all, do: MyRepo.all(from p in Post)
 
