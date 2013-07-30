@@ -5,13 +5,13 @@ defmodule ApplicationRouter do
 
   prepare do
     conn.fetch([:cookies, :params])
-    conn = conn.assign(:title, "Elixir Blog")
+    conn.assign :layout, "main"
   end
 
   forward "/posts", to: PostsRouter
 
   get "/" do
-    render conn, "index.html", posts: PostQueries.all
+    render conn, "index.html", posts: PostQueries.all, title: "Elixir Blog"
   end
 
   get "/*" do
