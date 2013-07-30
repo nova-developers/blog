@@ -32,6 +32,8 @@
 
         <p>An experiment by <a href="http://www.github.com/nurugger07" target="_blank">Johnny Winn</a></p>
 
+        <a href="signin.html" class="button signin">Sign In</a>
+
       </div>
 
     </footer>

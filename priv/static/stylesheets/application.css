@@ -21,6 +21,9 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
 
 a {
   text-decoration: none;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
 }
 
 a img, :link img, :visited img, fieldset {
@@ -82,9 +85,6 @@ header a {
 
 header a:hover {
   color: #ffffff;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  -o-transition: color 0.3s;
 }
 
 section {
@@ -174,9 +174,6 @@ article h1 a {
 
 article h1 a:hover {
   color: #f14a2a;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  -o-transition: color 0.3s;
 }
 
 article h1::after {
@@ -269,9 +266,6 @@ input[type="submit"] {
 
 .draft:hover {
   background: #747474;
-  -webkit-transition: background 0.3s;
-  -moz-transition: background 0.3s;
-  -o-transition: background 0.3s;
 }
 
 .publish {
@@ -281,9 +275,6 @@ input[type="submit"] {
 
 .publish:hover {
   background: #313131;
-  -webkit-transition: background 0.3s;
-  -moz-transition: background 0.3s;
-  -o-transition: background 0.3s;
 }
 
 .button {
@@ -306,15 +297,23 @@ input[type="submit"] {
 .error .button:hover {
   background: #ffffff;
   color: #f14a2a;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
 }
 
 .readmore {
   background: #f14a2a;
   float: left;
   margin-top: 20px;
+}
+
+.signin {
+  background: #3c3b3b;
+  color: #8e8e8e;
+  margin-top: 20px;
+}
+
+.signin:hover {
+  background: #f14a2a;
+  color: #ffffff;
 }
 
 .date {
@@ -330,9 +329,6 @@ input[type="submit"] {
 
 .readmore:hover {
   background: #313131;
-  -webkit-transition: background 0.3s;
-  -moz-transition: background 0.3s;
-  -o-transition: background 0.3s;
 }
 
 .nav {
@@ -341,9 +337,6 @@ input[type="submit"] {
 
 .nav:hover {
   background: #f14a2a;
-  -webkit-transition: background 0.3s;
-  -moz-transition: background 0.3s;
-  -o-transition: background 0.3s;
 }
 
 .prev {
