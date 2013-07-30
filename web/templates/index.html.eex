@@ -36,5 +36,15 @@
 
     </div>
 
+    <footer>
+
+      <div class="container">
+
+        <p>An experiment by <a href="http://www.github.com/nurugger07" target="_blank">Johnny Winn</a></p>
+
+      </div>
+
+    </footer>
+
   </body>
 </html>
