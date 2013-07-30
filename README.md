@@ -5,6 +5,7 @@ _An Excuse to Explore_
 2. install elixir
 3. clone project
 4. run `mix deps.get` from inside the directory
+5. run `bundle` this will setup the testing and migration tools
 5. SQL fun:
   create user in postgres with createdb role
 
