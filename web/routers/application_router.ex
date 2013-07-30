@@ -15,7 +15,7 @@ defmodule ApplicationRouter do
   end
 
   get "/*" do
-    render conn, "404.html"
+    render conn, "404.html", layout: "secondary"
   end
 
 end
