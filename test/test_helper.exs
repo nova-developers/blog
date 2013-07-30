@@ -5,8 +5,6 @@ Dynamo.under_test(Blog.Dynamo)
 Dynamo.Loader.enable
 ExUnit.start
 
-alias Ecto.Adapters.Postgres
-
 defmodule Blog.TestCase do
   use ExUnit.CaseTemplate
 
