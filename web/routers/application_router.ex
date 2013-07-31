@@ -1,21 +1,23 @@
-Code.require_file "../blog.ex", __FILE__
+Code.require_file("../blog.ex", __FILE__)
 
 defmodule ApplicationRouter do
   use Dynamo.Router
 
+  import PageFormatHelpers
+
   prepare do
-    conn.fetch([:cookies, :params])
-    conn.assign :layout, "main"
+    conn = conn.fetch([:cookies, :params]) |>
+                      title("Elixir Blog") |>
+                      layout("main")
   end
 
   forward "/posts", to: PostsRouter
 
   get "/" do
-    render conn, "index.html", posts: PostQueries.all, title: "Elixir Blog"
+    render conn, "index.html", posts: PostQueries.all
   end
 
   get "/*" do
     render conn, "404.html", layout: "secondary"
   end
-
 end
