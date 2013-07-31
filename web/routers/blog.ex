@@ -1,2 +1,25 @@
-Code.require_file "../../entities/repo.ex", __FILE__
-Code.require_file "../../entities/posts.ex", __FILE__
+defmodule AppIncludes do
+
+  def include_all(env, directories) when env == :dev do
+    Enum.each(directories, fn(x) -> AppIncludes.include_directory(Path.expand("../../#{x}", __FILE__)) end)
+  end
+
+  def include_all(env, directories) when env == :test do
+    IO.puts Path.expand("../../entities", __FILE__)
+    Enum.each(directories, fn(x) -> AppIncludes.include_directory(Path.expand("../../#{x}", __FILE__)) end)
+  end
+
+  def include_directory(dir) do
+    list_files(dir) |> require_for(dir)
+  end
+
+  defp list_files(dir), do: File.ls(dir)
+
+  defp require_for({ :error, _ }, _dir), do: nil
+  defp require_for({ :ok, files }, dir) do
+    Enum.each(files, fn(file) -> Code.require_file("#{dir}/#{file}") end)
+  end
+
+end
+
+AppIncludes.include_all(Mix.env, [:entities, :helpers])
