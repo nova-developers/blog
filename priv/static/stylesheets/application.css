@@ -304,6 +304,10 @@ input[type="submit"] {
   width: auto;
 }
 
+input[type="submit"]:focus {
+  color: #ffffff;
+}
+
 input[type="submit"]:hover {
   background: #313131;
 }
@@ -356,13 +360,21 @@ input[type="submit"]:hover {
   color: #ffffff;
 }
 
-.date {
+.credits {
   color: #b4b4b4;
   font: 17px "Raleway", sans-serif;
-  margin: 34px 0 0 0;
+  margin: 36px 0 0 0;
 }
 
-.readmore + .date {
+.credits a {
+  color: #f14a2a;
+}
+
+.credits a:hover {
+  color: #313131;
+}
+
+.readmore + .credits {
   float: left;
   margin-left: 20px;
 }
