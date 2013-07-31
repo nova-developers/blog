@@ -20,10 +20,15 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
   padding: 0; }
 
 a {
+  color: #f14a2a;
   text-decoration: none;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -o-transition: all .3s;
+}
+
+a:hover {
+  color: #313131;
 }
 
 input[type="submit"]:hover {
@@ -111,6 +116,13 @@ section h1 {
   margin-bottom: 50px;
 }
 
+section h2 {
+  color: #313131;
+  font-size: 27px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
 /* CSS animation thanks to Justin Aguilar, http://www.justinaguilar.com/animations */
 
 .notfound section h1 {
@@ -166,8 +178,13 @@ section h1 {
 article {
   border-bottom: 1px solid #e6e6e6;
   padding: 0 20px 60px 20px;
-  margin: 0 -20px 60px -20px;
+  margin: 0 -20px 75px -20px;
   overflow: hidden;
+}
+
+article.author {
+  padding-bottom: 30px;
+  margin-bottom: 45px;
 }
 
 article h1 {
@@ -192,6 +209,35 @@ article h1::after {
   margin: 30px 0;
 }
 
+article.author h1 {
+  margin-bottom: 15px;
+}
+
+article.author h1 span {
+  color: #858484;
+  font-size: 17px;
+  font-weight: 200;
+  padding: 10px 20px;
+  background: #ececec;
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  margin-left: 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+article.author h1::after {
+  border-top: 0;
+  display: none;
+}
+
 section p, li {
   color: #696969;
   font: 16px/30px "Merriweather", serif;
@@ -213,6 +259,12 @@ article img {
   margin: 0 0 20px 20px;
 }
 
+article.author img {
+  border-bottom: 0;
+  float: none;
+  margin: 0 0 10px 0;
+}
+
 ul, ol {
   list-style-position: inside;
   margin: 0 0 15px 20px;
@@ -228,6 +280,21 @@ ol {
 
 li {
   margin: 0 0 5px 20px;
+}
+
+dl.articles {
+  font-family: "Raleway", sans-serif;
+}
+
+dl.articles dt {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+dl.articles dd {
+  font-size: 17px;
+  font-weight: 200;
+  margin-bottom: 20px;
 }
 
 label {
@@ -346,7 +413,7 @@ input[type="submit"]:hover {
 .readmore {
   background: #f14a2a;
   float: left;
-  margin-top: 20px;
+  margin: 20px 0 15px;
 }
 
 .signin {
