@@ -1,11 +1,6 @@
 defmodule AppIncludes do
 
-  def include_all(env, directories) when env == :dev do
-    Enum.each(directories, fn(x) -> AppIncludes.include_directory(Path.expand("../../#{x}", __FILE__)) end)
-  end
-
-  def include_all(env, directories) when env == :test do
-    IO.puts Path.expand("../../entities", __FILE__)
+  def include_all(directories) do
     Enum.each(directories, fn(x) -> AppIncludes.include_directory(Path.expand("../../#{x}", __FILE__)) end)
   end
 
@@ -22,4 +17,4 @@ defmodule AppIncludes do
 
 end
 
-AppIncludes.include_all(Mix.env, [:entities, :helpers])
+AppIncludes.include_all([:entities, :helpers])
