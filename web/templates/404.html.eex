@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :body_class do %>
-  error
+  notfound
 <% end %>
 
 <h1>404</h1>

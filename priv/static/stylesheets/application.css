@@ -61,7 +61,7 @@ body {
   margin: 0 0 340px;
 }
 
-.error {
+.notfound {
   background: #313131;
 }
 
@@ -98,7 +98,7 @@ section {
   padding-bottom: 150px;
 }
 
-.error section {
+.notfound section {
   text-align: center;
   padding-top: 120px;
 }
@@ -113,7 +113,7 @@ section h1 {
 
 /* CSS animation thanks to Justin Aguilar, http://www.justinaguilar.com/animations */
 
-.error section h1 {
+.notfound section h1 {
   color: #ffffff;
   font: 220px/1 "Helvetica", Arial, sans-serif;
   font-weight: bold;
@@ -272,6 +272,14 @@ textarea {
   max-width: 100%;
 }
 
+.error label {
+  color: #f14a2a;
+}
+
+.error input, .error textarea {
+  border: 1px solid #f14a2a;
+}
+
 .actions a {
   font: 17px "Raleway", sans-serif;
   color: #f14a2a;
@@ -317,12 +325,12 @@ input[type="submit"]:hover {
   border-radius: 5px;
 }
 
-.error .button {
+.notfound .button {
   background: #f14a2a;
   margin-top: 45px;
 }
 
-.error .button:hover {
+.notfound .button:hover {
   background: #ffffff;
   color: #f14a2a;
 }
