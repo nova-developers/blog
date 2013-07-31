@@ -80,6 +80,7 @@ header {
   background: #313131;
   padding: 50px 0;
   margin-bottom: 80px;
+  overflow: hidden;
 }
 
 header h1 {
@@ -88,13 +89,29 @@ header h1 {
   line-height: 41px;
   font-weight: 200;
   padding-left: 40px;
+  float: left;
 }
 
-header a {
+header h1 a {
   color: #dadada;
 }
 
-header a:hover {
+header h1 a:hover {
+  color: #ffffff;
+}
+
+.session {
+  float: right;
+}
+
+.session a.username {
+  color: #818181;
+  font: 17px "Raleway", sans-serif;
+  font-weight: 200;
+  padding-right: 10px;
+}
+
+.session a.username:hover {
   color: #ffffff;
 }
 
@@ -187,6 +204,17 @@ article.author {
   margin-bottom: 45px;
 }
 
+article.user {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}
+
+article.list {
+  padding-bottom: 20px;
+  margin-bottom: 35px;
+}
+
 article h1 {
   margin-bottom: 0;
 }
@@ -233,7 +261,7 @@ article.author h1 span {
   box-sizing: border-box;
 }
 
-article.author h1::after {
+article.author h1::after, article.user h1::after {
   border-top: 0;
   display: none;
 }
@@ -265,6 +293,10 @@ article.author img {
   margin: 0 0 10px 0;
 }
 
+article.user img {
+  border-bottom: 0;
+}
+
 ul, ol {
   list-style-position: inside;
   margin: 0 0 15px 20px;
@@ -282,19 +314,23 @@ li {
   margin: 0 0 5px 20px;
 }
 
-dl.articles {
+dl.articles, dl.drafts {
   font-family: "Raleway", sans-serif;
 }
 
-dl.articles dt {
+dl.articles dt, dl.drafts dt {
   font-size: 20px;
   font-weight: 700;
 }
 
-dl.articles dd {
+dl.articles dd, dl.drafts dd {
   font-size: 17px;
   font-weight: 200;
   margin-bottom: 20px;
+}
+
+dl.drafts dt a {
+  color: #757575;
 }
 
 label {
@@ -410,6 +446,24 @@ input[type="submit"]:hover {
   color: #f14a2a;
 }
 
+a.button:hover {
+  color: #ffffff;
+}
+
+.edit {
+  background: #f14a2a;
+  margin: 10px 0 0 0;
+  padding: 10px 20px;
+}
+
+.edit:hover {
+  background: #313131;
+}
+
+.edit + h1 {
+  margin-top: 40px;
+}
+
 .readmore {
   background: #f14a2a;
   float: left;
@@ -425,6 +479,17 @@ input[type="submit"]:hover {
 .signin:hover {
   background: #f14a2a;
   color: #ffffff;
+}
+
+.signout {
+  color: #818181;
+  background: #3d3d3d;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.signout:hover {
+  background: #484848;
 }
 
 .credits {
