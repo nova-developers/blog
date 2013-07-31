@@ -192,13 +192,17 @@ article h1::after {
   margin: 30px 0;
 }
 
-article p, li {
+section p, li {
   color: #696969;
   font: 16px/30px "Merriweather", serif;
 }
 
-article p {
+section p {
   margin-bottom: 15px;
+}
+
+section p.instructions {
+  margin-bottom: 40px;
 }
 
 article img {
@@ -263,7 +267,7 @@ input[type="password"] {
 
 input:focus, textarea:focus {
   color: #414141;
-  border: 1px solid #f14a2a;
+  border: 1px solid #909090;
   outline: 0;
 }
 
