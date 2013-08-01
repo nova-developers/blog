@@ -541,21 +541,36 @@ a.button:hover {
   color: #ffffff;
 }
 
-.edit {
-  background: #f14a2a;
+.edit, .view {
   margin: 10px 0 0 0;
   padding: 10px 20px;
-}
-
-.edit:hover {
-  background: #313131;
 }
 
 .edit + h1 {
   margin-top: 40px;
 }
 
-@media screen and (max-width: 565px) {
+.edit {
+  background: #a6a6a6;
+}
+
+.edit:hover {
+  background: #525252;
+}
+
+.view {
+  background: #f14a2a;
+}
+
+.view:hover {
+  background: #313131;
+}
+
+.view + h1 {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 585px) {
   article.user .edit {
     margin-bottom: 30px;
   }
