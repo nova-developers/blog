@@ -112,7 +112,7 @@ header h1 a:hover {
   float: right;
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 565px) {
   header h1 {
     float: none;
     margin-bottom: 20px;
@@ -358,6 +358,13 @@ article.author img {
 
 article.user img {
   border-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+  article.user img {
+    float: none;
+    margin: 0;
+  }
 }
 
 form {
