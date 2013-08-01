@@ -324,12 +324,12 @@ article.author h1 span {
   }
 }
 
-article.author h1::after, article.user h1::after {
+article.author h1::after, article.user h1::after, article.user_edit h1::after {
   border-top: 0;
   display: none;
 }
 
-article.user h1 {
+article.user_edit h1 {
   margin-bottom: 30px;
 }
 
@@ -360,12 +360,12 @@ article.author img {
   margin: 0 0 10px 0;
 }
 
-article.user img {
+article.user_edit img, article.user img {
   border-bottom: 0;
 }
 
 @media screen and (max-width: 600px) {
-  article.user img {
+  article.user_edit img, article.user img {
     float: none;
     margin: 0;
   }
@@ -553,6 +553,12 @@ a.button:hover {
 
 .edit + h1 {
   margin-top: 40px;
+}
+
+@media screen and (max-width: 565px) {
+  article.user .edit {
+    margin-bottom: 30px;
+  }
 }
 
 .readmore {
