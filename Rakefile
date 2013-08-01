@@ -26,18 +26,6 @@ namespace :db do
     ActiveRecord::Migration.descendants.each { |m| m.send(direction) }
   end
 
-  namespace :test do
-    PG_SPEC.merge!({:database => 'blog_test'})
-
-    task :prepare do
-      run_migrations(:up, PG_SPEC)
-    end
-
-    task :rollback do
-      run_migrations(:down, PG_SPEC)
-    end
-  end
-
   task :migrate do
     run_migrations(:up, PG_SPEC)
   end
@@ -45,4 +33,19 @@ namespace :db do
   task :rollback do
     run_migrations(:down, PG_SPEC)
   end
+
+  namespace :test do
+    def config
+      PG_SPEC.merge({:database => 'blog_test'})
+    end
+
+    task :prepare do
+      run_migrations(:up, config)
+    end
+
+    task :rollback do
+      run_migrations(:down, config)
+    end
+  end
+
 end
