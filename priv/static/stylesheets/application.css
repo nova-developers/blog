@@ -329,13 +329,26 @@ article.author h1 span {
   }
 }
 
-article.author h1::after, article.user h1::after, article.user_edit h1::after {
+article.author h1::after, article.user h1::after, article.user_edit h1::after, aside h1::after {
   border-top: 0;
   display: none;
 }
 
 article.user_edit h1 {
   margin-bottom: 30px;
+}
+
+aside h1 {
+  font-size: 25px;
+  display: inline-block;
+}
+
+aside h1 a {
+  color: #f14a2a;
+}
+
+aside h1 a:hover {
+  color: #313131;
 }
 
 section p, li {
@@ -357,6 +370,13 @@ article img {
   clear: both;
   padding-bottom: 15px;
   margin: 0 0 20px 20px;
+}
+
+article aside img {
+  float: left;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin: 0 20px 0 0;
 }
 
 article.author img {
@@ -397,6 +417,10 @@ ul.author_actions {
 ul.social {
   list-style: none;
   margin: 20px 0;
+}
+
+h1 + ul.social {
+  margin: 8px 0 15px 0;
 }
 
 ol {
@@ -603,6 +627,7 @@ a.button:hover {
 }
 
 .twitter, .github {
+  font-size: 16px;
   padding: 10px 20px 10px 40px;
 }
 
@@ -615,7 +640,7 @@ a.button:hover {
 }
 
 .github {
-  background: #171515 url("../images/icon_github.png") 15px 12px no-repeat;
+  background: #171515 url("../images/icon_github.png") 15px 11px no-repeat;
 }
 
 .github:hover {
@@ -642,7 +667,7 @@ a.button:hover {
 .credits {
   color: #b4b4b4;
   font: 17px "Raleway", sans-serif;
-  margin: 36px 0 0 0;
+  margin: 36px 0 3px 0;
 }
 
 .credits a {
