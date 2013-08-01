@@ -279,6 +279,10 @@ article > h1 {
   margin-bottom: 20px;
 }
 
+article.user > h1 {
+  margin-bottom: 0;
+}
+
 article h1 a {
   color: #313131;
 }
@@ -333,7 +337,7 @@ article h1 a:hover {
   display: none;
 }
 
-.user_edit h1 {
+article.user_edit > h1, article.user_edit h1 {
   margin-bottom: 30px;
 }
 
