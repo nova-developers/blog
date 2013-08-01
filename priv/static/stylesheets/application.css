@@ -364,7 +364,7 @@ section p.instructions {
   margin-bottom: 40px;
 }
 
-article img {
+.blog_post > img {
   border-bottom: 5px solid #313131;
   float: right;
   clear: both;
@@ -372,28 +372,28 @@ article img {
   margin: 0 0 20px 20px;
 }
 
-article aside img {
+aside img {
   float: left;
   border-bottom: 0;
   padding-bottom: 0;
   margin: 0 20px 0 0;
 }
 
-article.author img {
+.user img {
+  float: right;
+}
+
+@media screen and (max-width: 585px) {
+  .user img {
+    float: none;
+    margin-bottom: 15px;
+  }
+}
+
+.author img {
   border-bottom: 0;
   float: none;
   margin: 0 0 10px 0;
-}
-
-article.user_edit img, article.user img {
-  border-bottom: 0;
-}
-
-@media screen and (max-width: 600px) {
-  article.user_edit img, article.user img {
-    float: none;
-    margin: 0;
-  }
 }
 
 form {
