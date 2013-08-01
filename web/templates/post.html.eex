@@ -1,6 +1,6 @@
 <section>
 
-  <article>
+  <article class="blog_post">
 
     <h1><%= @post.headline %></h1>
     <p>
