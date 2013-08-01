@@ -16,6 +16,10 @@
 
       <div class="container">
         <h1><a href="/"><%= @title %></a></h1>
+
+        <div class="session">
+          <a href="signin.html" class="button signinout">Sign In</a>
+        </div>
       </div>
 
     </header>
@@ -31,8 +35,6 @@
       <div class="container">
 
         <p>An experiment by <a href="http://www.github.com/nurugger07" target="_blank">Johnny Winn</a></p>
-
-        <a href="signin.html" class="button signin">Sign In</a>
 
       </div>
 
