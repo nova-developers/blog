@@ -73,10 +73,15 @@ body {
 
 .container {
   width: 75%;
+  padding: 0 20px;
   min-width: 320px;
   max-width: 750px;
   margin: 0 auto;
   position: relative;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header {
@@ -262,6 +267,10 @@ article.list {
   margin-bottom: 45px;
 }
 
+article.author + article.list {
+  border-bottom: 0;
+}
+
 article h1 {
   margin-bottom: 0;
 }
@@ -306,6 +315,13 @@ article.author h1 span {
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 510px) {
+  article.author h1 span {
+    position: relative;
+    margin: 0 0 25px 0;
+  }
 }
 
 article.author h1::after, article.user h1::after {
