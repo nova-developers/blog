@@ -155,6 +155,10 @@ header h1 a:hover {
   padding-top: 120px;
 }
 
+section {
+  overflow: hidden;
+}
+
 section h1 {
   color: #313131;
   font-size: 42px;
@@ -242,7 +246,7 @@ article.user {
 
 article.list {
   padding-bottom: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 
 article h1 {
@@ -427,6 +431,11 @@ textarea {
 
 .error input, .error textarea {
   border: 1px solid #cf4444;
+}
+
+.actions {
+  margin-bottom: 60px;
+  overflow: hidden;
 }
 
 .actions a {
