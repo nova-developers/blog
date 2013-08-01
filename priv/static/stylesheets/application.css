@@ -394,6 +394,11 @@ ul.author_actions {
   margin: 10px 0 0 0;
 }
 
+ul.social {
+  list-style: none;
+  margin: 20px 0;
+}
+
 ol {
   list-style: decimal;
 }
@@ -402,12 +407,12 @@ li {
   margin: 0 0 5px 20px;
 }
 
-.author_actions li {
+.author_actions li, .social li {
   display: inline-block;
   margin: 0;
 }
 
-.author_actions li + li {
+.author_actions li + li, .social li + li {
   margin-left: 5px;
 }
 
@@ -595,6 +600,26 @@ a.button:hover {
 
 .new:hover {
   background: #313131;
+}
+
+.twitter, .github {
+  padding: 10px 20px 10px 40px;
+}
+
+.twitter {
+  background: #00acee url("../images/icon_twitter.png") 15px 12px no-repeat;
+}
+
+.twitter:hover {
+  background-color: #0095cd;
+}
+
+.github {
+  background: #171515 url("../images/icon_github.png") 15px 12px no-repeat;
+}
+
+.github:hover {
+  background-color: #000000;
 }
 
 .readmore {
