@@ -72,7 +72,9 @@ body {
 }
 
 .container {
-  width: 750px;
+  width: 75%;
+  min-width: 320px;
+  max-width: 750px;
   margin: 0 auto;
   position: relative;
 }
@@ -103,6 +105,17 @@ header h1 a:hover {
 
 .session {
   float: right;
+}
+
+@media screen and (max-width: 510px) {
+  header h1 {
+    float: none;
+    margin-bottom: 20px;
+  }
+  .session {
+    clear: left;
+    float: none;
+  }
 }
 
 .session a.username {
@@ -569,6 +582,11 @@ a.button:hover {
 
 .next {
   float: right;
+}
+
+nav {
+  margin-bottom: 60px;
+  overflow: hidden;
 }
 
 footer {
