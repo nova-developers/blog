@@ -304,8 +304,8 @@ article.author h1 span {
   padding: 10px 20px;
   background: #ececec;
   display: inline-block;
-  position: absolute;
-  top: 4px;
+  position: relative;
+  top: -7px;
   margin-left: 15px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
