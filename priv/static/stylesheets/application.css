@@ -251,12 +251,16 @@ article {
   overflow: hidden;
 }
 
+article.no_articles {
+  border-bottom: 0;
+}
+
 article.author {
   padding-bottom: 30px;
   margin-bottom: 45px;
 }
 
-article.user {
+article.user, article.user_edit {
   border-bottom: 0;
   padding-bottom: 0;
   margin-bottom: 20px;
