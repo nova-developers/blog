@@ -5,4 +5,3 @@ defmodule PageFormatHelpers do
   def layout(conn, layout), do: conn.assign(:layout, layout)
 
 end
-

@@ -14,7 +14,7 @@ defmodule PostsRouter do
     render_post(conn, PostQueries.find_by_id(id))
   end
 
-  def render_post(conn, post) when post == nil, do: render(conn, "404.html")
+  def render_post(conn, post) when post == nil, do: render(conn, "404.html", layout: "secondary")
   def render_post(conn, post), do: render(conn, "post.html", post: post)
 
 end

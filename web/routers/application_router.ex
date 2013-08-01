@@ -12,6 +12,8 @@ defmodule ApplicationRouter do
   end
 
   forward "/posts", to: PostsRouter
+  forward "/authentication", to: AuthenticationRouter
+  forward "/user", to: UsersRouter
 
   get "/" do
     render conn, "index.html", posts: PostQueries.all

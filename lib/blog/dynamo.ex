@@ -16,11 +16,11 @@ defmodule Blog.Dynamo do
     static_route: "/static"
 
   # Uncomment the lines below to enable the cookie session store
-  # config :dynamo,
-  #   session_store: Session.CookieStore,
-  #   session_options:
-  #     [ key: "_blog_session",
-  #       secret: "z4aaySme73lXMrlPQvYeTmKoGpcd9dRHMR1eWT+abIoZyFx7W3Rzngacc1n57wCW"]
+  config :dynamo,
+    session_store: Session.CookieStore,
+    session_options:
+      [ key: "_blog_session",
+        secret: "z4aaySme73lXMrlPQvYeTmKoGpcd9dRHMR1eWT+abIoZyFx7W3Rzngacc1n57wCW"]
 
   # Default functionality available in templates
   templates do

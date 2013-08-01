@@ -8,4 +8,5 @@ Capybara.default_driver = :selenium
 
 After do
   Posts.down
+  Users.down
 end
