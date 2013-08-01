@@ -424,7 +424,7 @@ input[type="submit"]:hover {
   background: #313131;
 }
 
-.draft {
+input[type="submit"].draft {
   background: #a6a6a6;
   float: right;
 }
