@@ -262,6 +262,10 @@ article.user {
   margin-bottom: 20px;
 }
 
+article.user p {
+  clear: both;
+}
+
 article.list {
   padding-bottom: 20px;
   margin-bottom: 45px;
@@ -384,12 +388,39 @@ ul {
   list-style: square;
 }
 
+ul.author_actions {
+  list-style: none;
+  margin: 10px 0 0 0;
+}
+
 ol {
   list-style: decimal;
 }
 
 li {
   margin: 0 0 5px 20px;
+}
+
+.author_actions li {
+  display: inline-block;
+  margin: 0;
+}
+
+.author_actions li + li {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 745px) {
+  ul.author_actions {
+    margin-bottom: 30px;
+  }
+  .author_actions li {
+    display: block;
+  }
+  .author_actions li + li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
 
 dl.articles, dl.drafts {
@@ -511,7 +542,7 @@ input[type="submit"].draft {
   float: right;
 }
 
-.draft:hover {
+input[type="submit"].draft:hover {
   background: #747474;
 }
 
@@ -541,8 +572,7 @@ a.button:hover {
   color: #ffffff;
 }
 
-.edit, .view {
-  margin: 10px 0 0 0;
+.edit, .view, .new {
   padding: 10px 20px;
 }
 
@@ -550,30 +580,20 @@ a.button:hover {
   margin-top: 40px;
 }
 
-.edit {
+.edit, .view {
   background: #a6a6a6;
 }
 
-.edit:hover {
+.edit:hover, .view:hover {
   background: #525252;
 }
 
-.view {
+.new {
   background: #f14a2a;
 }
 
-.view:hover {
+.new:hover {
   background: #313131;
-}
-
-.view + h1 {
-  margin-top: 40px;
-}
-
-@media screen and (max-width: 585px) {
-  article.user .edit {
-    margin-bottom: 30px;
-  }
 }
 
 .readmore {
