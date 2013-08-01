@@ -329,6 +329,10 @@ article.author h1::after, article.user h1::after {
   display: none;
 }
 
+article.user h1 {
+  margin-bottom: 30px;
+}
+
 section p, li {
   color: #696969;
   font: 16px/30px "Merriweather", serif;
