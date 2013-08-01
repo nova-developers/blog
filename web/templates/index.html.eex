@@ -1,6 +1,6 @@
   <section>
     <%= lc { id, headline, content } inlist @posts do %>
-      <article>
+      <article class="blog_post">
         <h1><a href="/posts/<%= id %>"><%= headline %></a></h1>
         <p>
           <%= content %>
