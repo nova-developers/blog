@@ -181,6 +181,10 @@ section h1 {
   position: relative;
 }
 
+section.new_post h1 {
+  margin-bottom: 30px;
+}
+
 section h2 {
   color: #313131;
   font-size: 27px;
