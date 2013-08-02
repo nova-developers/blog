@@ -1,0 +1,48 @@
+<section>
+  <article class="user_edit">
+
+    <img src="<%= @user.gravatar %>" alt="Ben Kenobi, of course">
+
+     <h1>Edit Settings</h1>
+
+     <form action="/user/<%= @user.id %>" method="POST">
+
+       <fieldset>
+
+         <dl class="edit_profile">
+           <dt><label>Full Name</label></dt>
+           <dd><input id="full_name" name="full_name" type="text" class="name" value="<%= @user.full_name %>"></dd>
+
+           <dt><label>Twitter Handle</label></dt>
+           <dd><input id="twitter" name="twitter" type="text" class="twitter_input" value="<%= @user.twitter %>"></dd>
+
+           <dt><label>Gravatar Link</label></dt>
+           <dd><input id="gravatar" name="gravatar" type="text" class="github_input" value="<%= @user.gravatar %>"></dd>
+
+           <dt><label>Email Address</label></dt>
+           <dd><input id="email" name="email" type="email" value="<%= @user.email %>"></dd>
+
+           <dt><label>Password</label></dt>
+           <dd><input id="password" name="password" type="password" value="<%= @user.password %>"></dd>
+
+           <dt><label>Confirm Password</label></dt>
+           <dd><input id="confirm" type="password"></dd>
+
+           <dt><label>Bio</label></dt>
+           <dd><textarea id="bio" name="bio"><%= @user.bio %></textarea></dd>
+         </dl>
+
+       </fieldset>
+
+       <fieldset class="actions">
+
+         <input type="submit" class="button" value="Save">
+
+       </fieldset>
+
+     </form>
+
+   </article>
+
+
+ </section>
