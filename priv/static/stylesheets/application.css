@@ -181,7 +181,7 @@ section h1 {
   position: relative;
 }
 
-section.new_post h1 {
+section.new_post h1, section.signin h1 {
   margin-bottom: 30px;
 }
 
