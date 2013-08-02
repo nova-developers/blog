@@ -37,7 +37,7 @@ end
 When "I update the user profile information" do
   fill_in :full_name, with: "Robert Terwilliger"
   fill_in :twitter, with: "_sideshow_bob"
-  fill_in :github, with: "sideshow-bob"
+  fill_in :gravatar, with: "sideshow-bob"
   fill_in :email, with: "sideshow_bob@example.com"
   fill_in :password, with: USER[:password]
   fill_in :confirm, with: USER[:password]

@@ -5,6 +5,8 @@ defmodule User do
     field :email, :string
     field :password, :string
     field :full_name, :string
+    field :gravatar, :string
+    field :twitter, :string
     field :bio, :string
   end
 end
@@ -12,10 +14,12 @@ end
 defmodule AuthenticationQueries do
   import Ecto.Query
 
-  def authenticate(email, _password) do
-    UserQueries.user(MyRepo.all(from u in User,
-                                where: u.email == email) |> Enum.fetch(0))
+  def authenticate(email, password), do: match_email(email, password) |> UserQueries.user
+
+  defp match_email(email, password) do
+    MyRepo.all(from u in User, where: u.email == email) |> Enum.fetch(0)
   end
+
 end
 
 
