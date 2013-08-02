@@ -513,7 +513,7 @@ input, textarea {
   color: #696969;
   font: 16px/30px "Merriweather", serif;
   border: 1px solid #c2c2c2;
-  padding: 15px;
+  padding: 15px 15px 15px 60px;
   margin-bottom: 20px;
   position: relative;
   width: 100%;
@@ -527,14 +527,28 @@ input, textarea {
   box-sizing: border-box;
 }
 
-.signinform input[type="email"] {
+input[type="email"] {
   background: transparent url("../images/icon_envelope.png") 20px center no-repeat;
-  padding-left: 60px;
 }
 
-.signinform input[type="password"] {
+input[type="password"] {
   background: transparent url("../images/icon_key.png") 20px center no-repeat;
-  padding-left: 60px;
+}
+
+.name {
+  background: transparent url("../images/icon_user.png") 20px center no-repeat;
+}
+
+.twitter_input {
+  background: transparent url("../images/icon_twitter.png") 20px center no-repeat;
+}
+
+.github_input {
+  background: transparent url("../images/icon_github.png") 20px center no-repeat;
+}
+
+.bio {
+  background: transparent url("../images/icon_bio.png") 20px 20px no-repeat;
 }
 
 input:focus, textarea:focus {
@@ -654,7 +668,7 @@ a.button:hover {
 }
 
 .twitter {
-  background: #00acee url("../images/icon_twitter.png") 15px 12px no-repeat;
+  background: #00acee url("../images/icon_social_twitter.png") 15px 12px no-repeat;
 }
 
 .twitter:hover {
@@ -662,7 +676,7 @@ a.button:hover {
 }
 
 .github {
-  background: #171515 url("../images/icon_github.png") 15px 11px no-repeat;
+  background: #171515 url("../images/icon_social_github.png") 15px 11px no-repeat;
 }
 
 .github:hover {
@@ -670,7 +684,7 @@ a.button:hover {
 }
 
 .email {
-  background: #F14A2B url("../images/icon_email.png") 15px 11px no-repeat;
+  background: #F14A2B url("../images/icon_social_email.png") 15px 11px no-repeat;
 }
 
 .email:hover {
