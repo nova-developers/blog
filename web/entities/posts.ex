@@ -10,7 +10,10 @@ end
 defmodule PostQueries do
   import Ecto.Query
 
-  def find_by_id(id), do: _find_by_id(id) |> post
+  import Converter
+
+  def find_by_id(id) when is_integer(id), do: _find_by_id(id) |> post
+  def find_by_id(id) when is_binary(id), do: to_integer(id) |> _find_by_id |> post
 
   def all, do: Enum.map(_all, fn(x) -> {x.id, x.headline, x.content} end)
 

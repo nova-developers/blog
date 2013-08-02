@@ -6,8 +6,8 @@
 
     <form action="/authentication/create" method="post" class="signinform">
       <fieldset>
-        <dl class="error">
-          <dt><label>Email address can't be blank.</label></dt>
+        <dl>
+          <dt><label>Email</label></dt>
           <dd><input name="email" type="email"></dd>
         </dl>
         <dl>

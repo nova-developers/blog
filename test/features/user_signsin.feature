@@ -5,4 +5,4 @@ Feature: User signs in
     When I am on the home page
     And I follow "Sign In"
     And I submit valid credentials
-    Then I should be on that user profile page
+    Then I see that user info in the session

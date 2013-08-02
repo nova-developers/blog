@@ -6,9 +6,10 @@ defmodule ApplicationRouter do
   import PageFormatHelpers
 
   prepare do
-    conn = conn.fetch([:cookies, :params]) |>
+    conn = conn.fetch([:session, :params]) |>
                       title("Elixir Blog") |>
-                      layout("main")
+                      layout("main") |>
+                      current_user
   end
 
   forward "/posts", to: PostsRouter

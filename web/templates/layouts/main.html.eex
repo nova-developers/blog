@@ -18,7 +18,12 @@
         <h1><a href="/"><%= @title %></a></h1>
 
         <div class="session">
-          <a href="signin.html" class="button signinout">Sign In</a>
+          <%= unless @current_user do %>
+            <a href="/authentication/new" class="button signinout">Sign In</a>
+          <%= else %>
+            <a href="/user/<%= @current_user.id %>" class="current_username"><%= @current_user.full_name %></a>
+            <a href="/authentication/destroy" class="button signinout">Sign Out</a>
+          <%= end %>
         </div>
       </div>
 

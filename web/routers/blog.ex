@@ -17,4 +17,4 @@ defmodule AppIncludes do
 
 end
 
-AppIncludes.include_all([:entities, :helpers])
+AppIncludes.include_all([:helpers, :entities])

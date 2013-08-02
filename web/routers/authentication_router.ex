@@ -1,27 +1,14 @@
 defmodule AuthenticationRouter do
   use Dynamo.Router
 
-  import PageFormatHelpers
-
-  import Dynamo.HTTP.Session
-
-  prepare do
-    conn = conn.fetch(:params) |>
-                      title("Elixir Blog") |>
-                      layout("main")
-
-    conn = conn.fetch(:session)
-  end
-
-  get "/new" do
-    render conn, "authentication/new.html"
-  end
+  get "/new", do: render(conn, "authentication/new.html")
 
   post "/create" do
     user = AuthenticationQueries.authenticate(conn.params[:email], conn.params[:password])
-
-    put_session(conn, :user, user) |>
-    redirect to: "/user/#{user.id}"
+    set_current_user(user, conn) |> redirect(to: "/user/#{user.id}")
   end
 
+  get "/destroy", do: put_session(conn, :current_user, nil) |> redirect(to: "/")
+
+  defp set_current_user(user, conn), do: put_session(conn, :current_user, user)
 end
