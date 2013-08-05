@@ -1,0 +1,26 @@
+<section>
+
+  <article class="author">
+
+    <img src="<%= @user.gravatar %>" alt="Image for <%= @user.full_name %>">
+
+    <h1><%= @user.full_name %> <span>Author</span></h1> 
+
+    <p><%= @user.bio %></p>
+
+    <ul class="social">
+      <li><a class="button twitter" href="http://www.twitter.com/<%= @user.twitter %>" target="_blank">Twitter</a></li>
+      <li><a class="button email" href="mailto:<%= @user.email %>">Email</a></li>
+    </ul>
+
+  </article>
+
+  <article class="list">
+
+    <h2>Articles</h2>
+
+    <p>No articles yet.</p>
+
+  </article>
+
+</section>

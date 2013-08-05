@@ -1,19 +1,21 @@
-<div class="container">
+<section>
 
-  <section>
+  <article class="user">
 
-    <article class="user">
+    <img src="<%= @user.gravatar %>" alt="Image for <%= @user.full_name %>">
+    <h1><%= @user.full_name %></h1>
+    <p><%= @user.bio %></p>
+    <%= if @current_user && @current_user.id == @user.id do %>
+      <ul class="author_actions">
+        <li><a href="/user/<%= @user.id %>/edit" class="button edit">Edit Profile</a></li>
+        <li><a href="/user/<%= @user.id %>/profile" class="button view">View Profile</a></li>
+      </ul>
+    <%= else %>
+      <ul class="social">
+        <li><a class="button twitter" href="http://www.twitter.com/<%= @user.twitter %>" target="_blank">Twitter</a></li>
+        <li><a class="button email" href="mailto:<%= @user.email %>">Email</a></li>
+      </ul>
+    <%= end %>
+  </article>
 
-      <img src="<%= @user.gravatar %>" alt="Image for <%= @user.full_name %>">
-      <h1><%= @user.full_name %></h1>
-      <p><%= @user.bio %></p>
-      <%= if @current_user && @current_user.id == @user.id do %>
-        <ul class="author_actions">
-          <li><a href="/user/<%= @user.id %>/edit" class="button edit">Edit Profile</a></li>
-        </ul>
-      <%= end %>
-    </article>
-
-  </section>
-
-</div>
+</section>

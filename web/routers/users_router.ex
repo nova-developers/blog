@@ -9,6 +9,10 @@ defmodule UsersRouter do
     render_user(conn, UserQueries.find_by_id(conn.params[:user_id]), "user/edit.html")
   end
 
+  get "/:user_id/profile" do
+    render_user(conn, UserQueries.find_by_id(conn.params[:user_id]), "user/profile.html")
+  end
+
   post "/:user_id" do
     UserQueries.update(conn.params)
     redirect conn, to: "/user/#{user_id}"
