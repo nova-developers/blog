@@ -16,7 +16,7 @@ defmodule AuthenticationQueries do
 
   def authenticate(email, password), do: match_email(email, password) |> UserQueries.user
 
-  defp match_email(email, password), do: single_or_default(from u in User, where: u.email == email)
+  defp match_email(email, password), do: single_or_default(from u in User, where: u.email == email, where: u.password == password)
 
   defp single_or_default(query), do: all(query) |> Enum.fetch(0)
 
