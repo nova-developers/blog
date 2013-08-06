@@ -1,33 +1,23 @@
-<div class="container">
+<section class="signin">
 
-  <%= if @error do %>
-    <div class="flash failure">
-      <p><%= @error %></p>
-    </div>
-  <%= end %>
+  <h1>Sign In</h1>
 
-  <section class="signin">
+  <form action="/authentication/create" method="post" class="signinform">
+    <fieldset>
+      <dl>
+        <dt><label>Email</label></dt>
+        <dd><input name="email" type="email" value="<%= @email %>"></dd>
+      </dl>
+      <dl>
+        <dt><label>Password</label></dt>
+        <dd><input name="password" type="password"></dd>
+      </dl>
+    </fieldset>
 
-    <h1>Sign In</h1>
+    <fieldset class="actions">
+      <input type="submit" class="button" value="Sign In">
+    </fieldset>
 
-    <form action="/authentication/create" method="post" class="signinform">
-      <fieldset>
-        <dl>
-          <dt><label>Email</label></dt>
-          <dd><input name="email" type="email" value="<%= @email %>"></dd>
-        </dl>
-        <dl>
-          <dt><label>Password</label></dt>
-          <dd><input name="password" type="password"></dd>
-        </dl>
-      </fieldset>
+  </form>
 
-      <fieldset class="actions">
-        <input type="submit" class="button" value="Sign In">
-      </fieldset>
-
-    </form>
-
-  </section>
-
-</div>
+</section>

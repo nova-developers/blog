@@ -5,9 +5,7 @@ defmodule AuthenticationRouter do
 
   get "/new", do: render(conn, @new)
 
-  post "/create" do
-    redirect_authentication(conn, authenticate(conn))
-  end
+  post "/create", do: redirect_authentication(conn, authenticate(conn))
 
   get "/destroy", do: put_session(conn, :current_user, nil) |> redirect(to: "/")
 

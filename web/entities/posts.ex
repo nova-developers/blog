@@ -13,12 +13,20 @@ defmodule PostQueries do
 
   import Converter
 
+  @validate_fields [:headline, :content, :user_id]
+
   def create(vals) do
-    Post.new(id: 0,
-             headline: vals[:headline],
-             content: vals[:content],
-             user_id: to_integer(vals[:user_id])) |>
-    _save(0)
+    if valid?(vals) do
+      Post.new(id: 0,
+              headline: vals[:headline],
+              content: vals[:content],
+              user_id: to_integer(vals[:user_id])) |>
+      _save(0)
+    end
+  end
+
+  defp valid?(fields) do
+    Enum.all?(@validate_fields, fn(x) -> String.length(fields[x]) > 0 end)
   end
 
   def find_by_id(id) when is_integer(id), do: _find_by_id(id) |> _post

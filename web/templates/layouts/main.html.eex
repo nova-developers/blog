@@ -31,6 +31,12 @@
 
     <div class="container">
 
+      <%= if @error do %>
+        <div class="flash failure">
+          <p><%= @error %></p>
+        </div>
+      <%= end %>
+
       <%= content_for(:template) %>
 
     </div>

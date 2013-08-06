@@ -16,7 +16,7 @@ defmodule ApplicationRouter do
   forward "/authentication", to: AuthenticationRouter
   forward "/user", to: UsersRouter
 
-  get "/", do: render(conn, "index.html", posts: PostQueries.all)
+  get "/", do: render(conn, "post/index.html", posts: PostQueries.all)
 
   get "/*", do: render(conn, "404.html", layout: "secondary")
 end
