@@ -7,6 +7,7 @@ class PostMigration < ActiveRecord::Migration
         id serial PRIMARY KEY,
         headline varchar(255) NOT NULL,
         content text NOT NULL,
+        user_id integer NOT NULL,
         published_on date);
     SQL
   end

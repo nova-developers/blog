@@ -12,15 +12,11 @@ defmodule ApplicationRouter do
                       current_user
   end
 
-  forward "/posts", to: PostsRouter
+  forward "/post", to: PostsRouter
   forward "/authentication", to: AuthenticationRouter
   forward "/user", to: UsersRouter
 
-  get "/" do
-    render conn, "index.html", posts: PostQueries.all
-  end
+  get "/", do: render(conn, "index.html", posts: PostQueries.all)
 
-  get "/*" do
-    render conn, "404.html", layout: "secondary"
-  end
+  get "/*", do: render(conn, "404.html", layout: "secondary")
 end

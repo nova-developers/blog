@@ -1,0 +1,20 @@
+<section class="new_post">
+  <h1>New Post</h1>
+  <form action="/post/create" method="POST">
+    <input type="hidden" value="<%= @current_user.id %>" name="user_id" id="user_id">
+    <dl>
+      <dt><label for="headline">Post Title</label></dt>
+      <dd><input id="headline" name="headline" type="text" /></dd>
+    </dl>
+    <dl>
+      <dt><label for="content">Content</label></dt>
+      <dd><textarea id="content" name="content"></textarea></dd>
+    </dl>
+
+    <fieldset class="actions">
+      <input type="submit" value="Publish" class="button publish">
+      <input type="submit" value="Save Draft" class="button draft">
+    </fieldset>
+
+  </form>
+</section>

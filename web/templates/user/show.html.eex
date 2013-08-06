@@ -9,6 +9,7 @@
       <ul class="author_actions">
         <li><a href="/user/<%= @user.id %>/edit" class="button edit">Edit Profile</a></li>
         <li><a href="/user/<%= @user.id %>/profile" class="button view">View Profile</a></li>
+        <li><a href="/post/new" class="button new">New Post</a></li>
       </ul>
     <%= else %>
       <ul class="social">
