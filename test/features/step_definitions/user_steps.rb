@@ -27,6 +27,16 @@ When "I submit valid credentials" do
   click_button "Sign In"
 end
 
+When "I submit invalid credentials" do
+  fill_in :email, with: "anything@nothing.org"
+  fill_in :password, with: "bogus"
+  click_button "Sign In"
+end
+
+Then "I see an authentication error" do
+  page.should have_content("Unable to authenticate. Please try again")
+end
+
 Then "I see that user info in the session" do
   within(".session") do
     page.should have_content(USER[:full_name])

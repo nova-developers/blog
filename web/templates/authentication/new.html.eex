@@ -1,5 +1,11 @@
 <div class="container">
 
+  <%= if @error do %>
+    <div class="flash failure">
+      <p><%= @error %></p>
+    </div>
+  <%= end %>
+
   <section class="signin">
 
     <h1>Sign In</h1>
@@ -8,7 +14,7 @@
       <fieldset>
         <dl>
           <dt><label>Email</label></dt>
-          <dd><input name="email" type="email"></dd>
+          <dd><input name="email" type="email" value="<%= @email %>"></dd>
         </dl>
         <dl>
           <dt><label>Password</label></dt>
